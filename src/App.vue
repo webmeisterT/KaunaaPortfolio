@@ -125,7 +125,7 @@ export default {
         {id:2,href:'https://www.facebook.com', icon:'mdi-facebook'},
         {id:3,href:'https://www.twitter.com', icon:'mdi-twitter'},
         {id:4,href:'https://www.linkedin.com', icon:'mdi-linkedin'},
-        {href:'mailto:kaunapraise@gmail.com', icon:'mdi-mail'},
+        {id:5,href:'mailto:kaunapraise@gmail.com', icon:'mdi-gmail'},
       ],
   }),
   computed: {
