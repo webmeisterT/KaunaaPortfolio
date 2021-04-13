@@ -12,7 +12,7 @@
       >
         <v-card
           class="pa-3 text-center py-10"
-          color="rgba(0,0,200,.5)"
+          color="rgba(209, 106, 185,1)"
           outlined
           tile
           elevation="6"

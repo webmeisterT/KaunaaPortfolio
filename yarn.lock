@@ -1095,6 +1095,11 @@
   dependencies:
     "source-map" "^0.6.1"
 
+"@types/uuid@^8.0.0":
+  "integrity" "sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ=="
+  "resolved" "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.0.tgz"
+  "version" "8.3.0"
+
 "@types/webpack-dev-server@^3.11.0":
   "integrity" "sha1-I34m2HZRz5VJDc01b1aMjIQBYXc="
   "resolved" "https://registry.npm.taobao.org/@types/webpack-dev-server/download/@types/webpack-dev-server-3.11.3.tgz"
@@ -3873,8 +3878,8 @@
     "to-regex" "^3.0.1"
 
 "express@^4.16.3", "express@^4.17.1":
-  "integrity" "sha1-RJH8OGBc9R+GKdOcK10Cb5ikwTQ="
-  "resolved" "https://registry.npm.taobao.org/express/download/express-4.17.1.tgz?cache=0&sync_timestamp=1598867231599&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpress%2Fdownload%2Fexpress-4.17.1.tgz"
+  "integrity" "sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g=="
+  "resolved" "https://registry.npmjs.org/express/-/express-4.17.1.tgz"
   "version" "4.17.1"
   dependencies:
     "accepts" "~1.3.7"
@@ -7871,9 +7876,9 @@
     "mime-types" "~2.1.17"
     "parseurl" "~1.3.2"
 
-"serve-static@1.14.1":
-  "integrity" "sha1-Zm5jbcTwEPfvKZcKiKZ0MgiYsvk="
-  "resolved" "https://registry.npm.taobao.org/serve-static/download/serve-static-1.14.1.tgz"
+"serve-static@^1.14.1", "serve-static@1.14.1":
+  "integrity" "sha512-JMrvUwE54emCYWlTI+hGrGv5I8dEwmco/00EvkzIIsR7MqrHonbD9pO2MOfFnpFntl7ecpZs+3mW+XbQZu9QCg=="
+  "resolved" "https://registry.npmjs.org/serve-static/-/serve-static-1.14.1.tgz"
   "version" "1.14.1"
   dependencies:
     "encodeurl" "~1.0.2"
@@ -8932,6 +8937,11 @@
   "resolved" "https://registry.npm.taobao.org/uuid/download/uuid-3.4.0.tgz?cache=0&sync_timestamp=1607460081656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-3.4.0.tgz"
   "version" "3.4.0"
 
+"uuid@^8.1.0":
+  "integrity" "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
+  "version" "8.3.2"
+
 "v8-compile-cache@^2.0.3":
   "integrity" "sha1-LeGWGMZtwkfc+2+ZM4A12CRaLO4="
   "resolved" "https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.3.0.tgz?cache=0&sync_timestamp=1614993892777&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fv8-compile-cache%2Fdownload%2Fv8-compile-cache-2.3.0.tgz"
@@ -9048,6 +9058,14 @@
   "integrity" "sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU="
   "resolved" "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
+
+"vue-uuid@^2.0.2":
+  "integrity" "sha512-PRf1CHg3uKi77bVRyAuW2u/T2PO9LxMr7cw9t9rNdpZTkNDyw1Fx6eJVL+8JOtM9VxxPkoZ/rwhXJ5l+X5AYzQ=="
+  "resolved" "https://registry.npmjs.org/vue-uuid/-/vue-uuid-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "@types/uuid" "^8.0.0"
+    "uuid" "^8.1.0"
 
 "vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.2.6", "vue@^2.6.11", "vue@^2.6.4":
   "integrity" "sha1-9evU+mvShpQD4pqJau1JBEVskSM="
