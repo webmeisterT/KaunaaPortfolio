@@ -4,7 +4,7 @@
       <v-col class="mb-5 pa-lg-5" cols="12" md="6">
         <v-card mt-3 elevation="0" color="grey" class="pa-lg-3">
           <v-card-text>
-            <v-form v-model="valid" ref="forms">
+            <v-form v-model="valid" ref="formz">
               <v-text-field
                 solo
                 v-model="formz.fullname"
@@ -22,13 +22,19 @@
               <v-textarea
                 solo
                 name="input-7-4"
-                v-model="formz.textarea"
+                v-model="formz.messg"
                 label="Send Message..."
                 :rules="nameRules"
                 required
               ></v-textarea>
 
-              <v-btn color="red white--text" class="px-5 mt-6"> Submit </v-btn>
+              <v-btn
+                color="red white--text"
+                class="px-5 mt-6"
+                @click="insertRecord()"
+              >
+                Submit
+              </v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -49,20 +55,50 @@
 </template>
 
 <script>
+import { apiClients } from "@/services";
+
 export default {
   name: "ConTact",
 
   data: () => ({
     valid: false,
+
     nameRules: [
       // v =>
       (v) => v == !!v || "This Field is required",
     ],
+
     emailRules: [
       (v) => v == !!v || "E-mail is required",
       (v) => /.+@.+/.test(v) || "E-mail must be valid",
     ],
-    formz: {},
+
+    formz: { id: "", fullname: "", email: "", messg: "" },
   }),
+  methods: {
+    insertRecord() {
+      this.loading = true;
+      // const {fullname, email, messg} = this.formz
+      apiClients
+        .post("/process", this.formz)
+        .then((res) => {
+          console.log(res);
+          console.log(res.data);
+          if (res.data.ok) {
+            this.loading = false;
+            this.displayMessage(
+              `Your Message Has Been Received, You will Be Contacted Shortly!`
+            );
+            this.initializeForm();
+          } else {
+            this.displayError(`Error in Connection,Please Try Again Later!`);
+          }
+        })
+        .catch((err) => this.displayError(`${err.message}`));
+    },
+    initializeForm() {
+      this.formz = { id: "", fullname: "", email: "", messg: "" };
+    },
+  },
 };
 </script>
