@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/missions/public_html/portfolio
+    - /bin/cp -R * $DEPLOYPATH
+    
